@@ -54,6 +54,7 @@ export const getSubject = (department, year) => async (dispatch) => {
   }
 };
 
+<<<<<<< HEAD
 // export const getTestResult =
 //   (department, year, section) => async (dispatch) => {
 //     try {
@@ -90,6 +91,22 @@ export const getTestResult = (department, year, section) => async (dispatch) => 
     dispatch({ type: SET_ERRORS, payload: errorData });
   }
 };
+=======
+export const getTestResult =
+  (department, year, section) => async (dispatch) => {
+    try {
+      const formData = {
+        department,
+        year,
+        section,
+      };
+      const { data } = await api.getTestResult(formData);
+      dispatch({ type: TEST_RESULT, payload: data });
+    } catch (error) {
+      dispatch({ type: SET_ERRORS, payload: error.response.data });
+    }
+  };
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
 
 export const getAttendance =
   (department, year, section) => async (dispatch) => {

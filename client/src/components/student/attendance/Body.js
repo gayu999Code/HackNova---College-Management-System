@@ -6,6 +6,7 @@ import { MenuItem, Select } from "@mui/material";
 import Spinner from "../../../utils/Spinner";
 import { SET_ERRORS } from "../../../redux/actionTypes";
 import * as classes from "../../../utils/styles";
+<<<<<<< HEAD
 import { 
   Chart as ChartJS, 
   ArcElement, 
@@ -28,6 +29,8 @@ ChartJS.register(
   Title
 );
 
+=======
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
 
 const Body = () => {
   const dispatch = useDispatch();
@@ -56,6 +59,7 @@ const Body = () => {
     dispatch({ type: SET_ERRORS, payload: {} });
   }, []);
 
+<<<<<<< HEAD
   const prepareChartData = () => {
     if (!attendance) return null;
     
@@ -169,6 +173,8 @@ const Body = () => {
   const chartData = attendance && attendance.length > 0 ? prepareChartData() : null;
 
 
+=======
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
   return (
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
@@ -194,6 +200,7 @@ const Body = () => {
                 </p>
               )}
             </div>
+<<<<<<< HEAD
 
             {/* Charts Section */}
             {!loading && attendance && attendance.length > 0 && (
@@ -250,6 +257,8 @@ const Body = () => {
               </div>
             )}
 
+=======
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
             {!loading &&
               Object.keys(error).length === 0 &&
               subjects?.length !== 0 && (
@@ -299,6 +308,7 @@ const Body = () => {
                         {res.total}
                       </h1>
                       <h1
+<<<<<<< HEAD
                         className={`col-span-1 ${
                           parseFloat(res.percentage) >= 75
                             ? 'text-green-600 font-bold'
@@ -308,10 +318,15 @@ const Body = () => {
                         } ${classes.adminDataBodyFields}`}
                       >
                         {res.percentage}%
+=======
+                        className={`col-span-1 ${classes.adminDataBodyFields}`}>
+                        {res.percentage}
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
                       </h1>
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
                  )}
                 {(!attendance || attendance.length === 0) && !loading && (
                   <div className="text-center py-10">
@@ -319,6 +334,10 @@ const Body = () => {
                   </div>
                 )}
               </div>
+=======
+              )}
+          </div>
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
         </div>
       </div>
     </div>
@@ -326,5 +345,8 @@ const Body = () => {
 };
 
 export default Body;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8

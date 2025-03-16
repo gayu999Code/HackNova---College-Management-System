@@ -47,8 +47,11 @@ import CreateNotice from "./components/admin/createNotice/CreateNotice";
 // import Upload from "./components/student/upload/UploadAssignment";
 // import UploadAssignment from "./components/student/upload/Body";
 import Upload from "./components/student/upload/Upload";
+<<<<<<< HEAD
 import EduGuru from "./components/student/eduguru/Eduguru";
 
+=======
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
 
 const App = () => {
   return (
@@ -109,7 +112,10 @@ const App = () => {
       <Route path="/student/testresult" element={<TestResult />} />
       <Route path="/student/attendance" element={<Attendance />} /> 
       <Route path="/student/upload" element={<Upload />} /> 
+<<<<<<< HEAD
       <Route path="/student/eduguru" element={<EduGuru />} />
+=======
+>>>>>>> 07164279a2bdf5bf06ab2255003042b3b58355f8
     </Routes>
   );
 };
